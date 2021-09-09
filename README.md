@@ -9,7 +9,7 @@ Examples for Image Processing course, INT3404 2021-2022
 
 + Load môi trường ảo
 
-    `source venv/bin/active`
+    `source venv/bin/activate`
     
 + Cài đặt các thư viện được liệt kê trong `requirements.txt`
 
