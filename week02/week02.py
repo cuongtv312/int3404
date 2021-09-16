@@ -18,7 +18,7 @@ def q_0(input_file, output_file, delay=1):
     :param delay:
     :return:
     """
-    img = cv2.imread(input_file, 1)
+    img = cv2.imread(input_file, cv2.IMREAD_COLOR)
     cv2.imshow('Test img', img)
     cv2.waitKey(delay)
 
