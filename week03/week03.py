@@ -10,11 +10,12 @@ import numpy as np
 import cv2
 import argparse
 
+DELAY = 5000
 
-def q_0(input_file, output_file, ):
+def q_0(input_file, output_file):
     img = cv2.imread(input_file, cv2.IMREAD_COLOR)
     cv2.imshow('Test img', img)
-    cv2.waitKey(5000)
+    cv2.waitKey(DELAY)
 
     cv2.imwrite(output_file, img)
 
@@ -45,9 +46,9 @@ def q_2(input_file, output_file):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input_file", "-i", type=str, help="Path to input image")
-    parser.add_argument("--output_file", "-o", type=str, help="Path to output image")
-    parser.add_argument("--question", "-q", type=int, default=0, help="Path to output image")
+    parser.add_argument("--input_file", "-i", type=str, help="Path to input image", required=True)
+    parser.add_argument("--output_file", "-o", type=str, help="Path to output image", required=True)
+    parser.add_argument("--question", "-q", type=int, default=0, help="Question to evaluate")
 
     args = parser.parse_args()
 
