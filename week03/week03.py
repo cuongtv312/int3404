@@ -47,7 +47,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--input_file", "-i", type=str, help="Path to input image")
     parser.add_argument("--output_file", "-o", type=str, help="Path to output image")
-    parser.add_argument("--question", "-q", type=int, default=0, help="Path to output image")
+    parser.add_argument("--question", "-q", type=int, default=0, help="Question number")
 
     args = parser.parse_args()
 
